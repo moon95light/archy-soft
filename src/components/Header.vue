@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 
 const showDropdown = ref(false)
-const tabs = ['Web Development', 'Mobile Apps', 'UI/UX Design']
+const tabs = ['demo1', 'demo2', 'demo3']
 const activeTab = ref(0)
 </script>
 
@@ -58,22 +58,22 @@ const activeTab = ref(0)
                         v-for="(tab, idx) in tabs"
                         :key="tab"
                         @click="activeTab = idx"
-                        :class="['py-2 px-4 font-semibold focus:outline-none', activeTab === idx ? 'border-b-2 border-red-600 text-red-600 dark:text-red-400' : 'text-gray-700 dark:text-gray-300']"
+                        :class="['font-mgm py-2 px-4 font-semibold focus:outline-none', activeTab === idx ? 'border-b-2 border-red-600 text-red-600 dark:text-red-400' : 'text-gray-700 dark:text-gray-300']"
                       >
                         {{ tab }}
                       </button>
                     </div>
                     <div class="flex-1 text-gray-700 dark:text-gray-200 text-lg">
                       <div v-if="activeTab === 0">
-                        <div class="font-bold mb-2">Web Development</div>
+                        <div class="mb-2">demo 1</div>
                         <p>We build scalable, robust web applications tailored to your business needs.</p>
                       </div>
                       <div v-else-if="activeTab === 1">
-                        <div class="font-bold mb-2">Mobile Apps</div>
+                        <div class="mb-2">demo 2</div>
                         <p>Our team creates high-performance mobile apps for iOS and Android platforms.</p>
                       </div>
                       <div v-else>
-                        <div class="font-bold mb-2">UI/UX Design</div>
+                        <div class="mb-2">demo 3</div>
                         <p>We design intuitive and engaging user experiences for your digital products.</p>
                       </div>
                     </div>
