@@ -24,14 +24,15 @@ const activeTab = ref(0)
             @mouseenter="showDropdown = true"
             @mouseleave="showDropdown = false"
           >
-            <button class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-4 py-2 font-medium transition-colors duration-200 flex items-center h-full">
+            <button class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-4 py-2 font-medium transition-colors duration-200 flex items-center h-full cursor-pointer">
               Our Services
-              <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              <svg v-if="!showDropdown" class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              <svg v-else class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 15l-7-7-7 7"/></svg>
             </button>
             <transition name="fade">
               <div
                 v-if="showDropdown"
-                class="fixed left-0 w-screen bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-xl z-50 flex items-center justify-center"
+                class="fixed left-0 w-screen bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-xl z-50 flex items-center justify-center rounded-b-2xl"
                 :style="{ top: '80px', height: '300px' }"
               >
                 <div class="flex w-full h-full">
