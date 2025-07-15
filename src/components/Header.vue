@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 
 const showDropdown = ref(false)
+const tabs = ['Web Development', 'Mobile Apps', 'UI/UX Design']
+const activeTab = ref(0)
 </script>
 
 <template>
@@ -32,9 +34,49 @@ const showDropdown = ref(false)
                 class="fixed left-0 w-screen bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-xl z-50 flex items-center justify-center"
                 :style="{ top: '80px', height: '300px' }"
               >
-                <div class="text-center text-2xl text-gray-700 dark:text-gray-200 w-full">
-                  <!-- Replace with your dropdown content -->
-                  <span class="font-semibold">Our Services Dropdown (Full Width, 300px Height)</span>
+                <div class="flex w-full h-full">
+                  <!-- First part: 1/8 width, blank -->
+                  <div class="w-2/8 h-full"></div>
+                  <!-- Second part: 3/8 width, title and list -->
+                  <div class="w-2/8 h-full flex flex-col justify-center px-8 border-r border-gray-200 dark:border-gray-700">
+                    <div class="text-left">
+                      <div class="text-xl font-bold mb-4 text-gray-800 dark:text-gray-100">Our Services</div>
+                      <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Web Development</a></li>
+                        <li><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Mobile Apps</a></li>
+                        <li><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">UI/UX Design</a></li>
+                        <li><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Cloud Solutions</a></li>
+                        <li><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Consulting</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Third part: 4/8 width, tabs -->
+                  <div class="w-4/8 h-full flex flex-col px-8">
+                    <div class="flex space-x-4 border-b border-gray-200 dark:border-gray-700 mb-4">
+                      <button
+                        v-for="(tab, idx) in tabs"
+                        :key="tab"
+                        @click="activeTab = idx"
+                        :class="['py-2 px-4 font-semibold focus:outline-none', activeTab === idx ? 'border-b-2 border-red-600 text-red-600 dark:text-red-400' : 'text-gray-700 dark:text-gray-300']"
+                      >
+                        {{ tab }}
+                      </button>
+                    </div>
+                    <div class="flex-1 text-gray-700 dark:text-gray-200 text-lg">
+                      <div v-if="activeTab === 0">
+                        <div class="font-bold mb-2">Web Development</div>
+                        <p>We build scalable, robust web applications tailored to your business needs.</p>
+                      </div>
+                      <div v-else-if="activeTab === 1">
+                        <div class="font-bold mb-2">Mobile Apps</div>
+                        <p>Our team creates high-performance mobile apps for iOS and Android platforms.</p>
+                      </div>
+                      <div v-else>
+                        <div class="font-bold mb-2">UI/UX Design</div>
+                        <p>We design intuitive and engaging user experiences for your digital products.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </transition>
