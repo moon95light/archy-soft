@@ -39,9 +39,9 @@ const activeTab = ref(0)
                   <!-- First part: 1/8 width, blank -->
                   <div class="w-2/8 h-full"></div>
                   <!-- Second part: 3/8 width, title and list -->
-                  <div class="w-2/8 h-full flex flex-col justify-center px-8 border-r border-gray-200 dark:border-gray-700">
+                  <div class="w-2/8 h-full flex flex-col pt-2 border-r border-gray-200 dark:border-gray-700">
                     <div class="text-left">
-                      <div class="text-xl font-bold mb-4 text-gray-800 dark:text-gray-100">Our Services</div>
+                      <div class="text-xl font-bold mb-4 text-gray-800 dark:text-gray-100">Services</div>
                       <ul class="space-y-2">
                         <li><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Web Development</a></li>
                         <li><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Mobile Apps</a></li>
