@@ -1,15 +1,13 @@
 @import "tailwindcss";
 
-
 @font-face {
-  font-family: 'MGM';
-  src: url('./assets/fonts/Roboto_Condensed-Black.ttf') format('ttf');
-  font-weight: normal;
+  font-family: 'MyFont';
+  src: url('./assets/fonts/Roboto_Condensed-Black.ttf') format('truetype');
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 .font-mgm {
-  font-family: 'MGM', sans-serif;
-  font-size: 12px;
+   font-family: 'MyFont', sans-serif;
+   font-size: 12px;
 }
