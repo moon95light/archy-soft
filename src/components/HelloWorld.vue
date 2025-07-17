@@ -5,16 +5,16 @@
    <section class="relative mt-20 bg-gradient-to-b from-white to-[#eacfd1] py-16 overflow-hidden">
     <!-- Graphic Section (background, lowest layer) -->
       <div class="absolute left-0 w-full flex gap-4 justify-center z-0 pointer-events-none ml-60 mt-40">
-         <div v-for="i in 4" :key="'pale2-' + i" class="w-24 h-48 skew-x-[-20deg]" style="background: linear-gradient(to bottom, #fff, #ebd0d3);"></div>
+         <div v-for="i in 4" :key="'pale2-' + i" class="w-24 h-48 skew-x-[-15deg]" style="background: linear-gradient(to bottom, #fff, #ebd0d3);"></div>
          <!-- Three red parallelograms -->
-         <div class="w-24 h-48 skew-x-[-20deg]" style="background: linear-gradient(to bottom, #fff, #ebd0d3);"></div>
+         <div class="w-24 h-48 skew-x-[-15deg]" style="background: linear-gradient(to bottom, #fff, #ebd0d3);"></div>
          <div class="flex gap-2">
-            <div class="w-24 h-48 bg-[#9c111d] skew-x-[-20deg] translate-y-4"></div>
-            <div class="w-24 h-66 bg-[#9c111d] skew-x-[-20deg]"></div>
-            <div class="w-24 h-86 bg-[#9c111d] skew-x-[-20deg] -translate-y-4"></div>
+            <div class="w-24 h-48 bg-[#9c111d] skew-x-[-15deg] translate-y-4"></div>
+            <div class="w-24 h-66 bg-[#9c111d] skew-x-[-15deg]"></div>
+            <div class="w-24 h-86 bg-[#9c111d] skew-x-[-15deg] -translate-y-4"></div>
          </div>
          <!-- Three #ebd0d3 parallelograms -->
-         <div v-for="i in 2" :key="'pale2b-' + i" class="w-24 h-68 skew-x-[-20deg]" style="background: linear-gradient(to bottom, #fff, #ebd0d3);"></div>
+         <div v-for="i in 2" :key="'pale2b-' + i" class="w-24 h-68 skew-x-[-15deg]" style="background: linear-gradient(to bottom, #fff, #ebd0d3);"></div>
       </div>
 
       <div class="relative z-10 max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
@@ -56,18 +56,18 @@
          <!-- The right side is intentionally left empty or can be used for an image/illustration if needed -->
          <div class="w-full md:w-1/2"></div>
       </div>
-      <div class="relative z-10 max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="relative z-10 max-w-7xl mt-10 mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
          <div>
-         <p class="text-2xl font-bold text-gray-900">30+</p>
-         <p class="text-gray-600 text-sm">MVPs launched</p>
+            <p class="text-2xl font-bold text-gray-900 font-size-level4">30+</p>
+            <p class="text-gray-600 font-size-level3">MVPs launched</p>
          </div>
          <div>
-         <p class="text-2xl font-bold text-gray-900">50+</p>
-         <p class="text-gray-600 text-sm">Tools mastered</p>
+            <p class="text-2xl font-bold text-gray-900 font-size-level4">50+</p>
+            <p class="text-gray-600 font-size-level3">Tools mastered</p>
          </div>
          <div>
-         <p class="text-2xl font-bold text-gray-900">95%</p>
-         <p class="text-gray-600 text-sm">Clients satisfaction</p>
+            <p class="text-2xl font-bold text-gray-900 font-size-level4">95%</p>
+            <p class="text-gray-600 font-size-level3">Clients satisfaction</p>
          </div>
       </div>
   </section>
