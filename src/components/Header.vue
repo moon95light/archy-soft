@@ -101,7 +101,7 @@ const activeTab = ref(0)
                         {{ tab }}
                       </button>
                     </div>
-                    <div class="flex-1 text-gray-700 dark:text-gray-200 text-lg">
+                    <div class="text-gray-700 dark:text-gray-200 text-lg">
                       <div v-if="activeTab === 0">
                         <div class="mb-2 font-bold">Hotel Management System</div>
                         <p class="font-size-level1">Swift and efficient hotel mangement system, encompassing all essential features for </p>
@@ -178,12 +178,13 @@ const activeTab = ref(0)
             <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-blue-400 px-4 py-2 font-medium transition-colors duration-200">Vacancies</a>
           </li>
           <li>
-            <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-blue-400 px-4 py-2 font-medium transition-colors duration-200">Contact us</a>
           </li>
         </ul>
       </nav>
       <!-- Book a call Button -->
       <div class="flex items-center h-full">
+         <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-blue-400 px-4 py-2 font-medium transition-colors duration-200">Contact us</a>
+         <div class="w-6"></div>
         <a href="#" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition-colors duration-200">Book a call</a>
       </div>
     </div>
