@@ -1,118 +1,79 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-defineProps<{ msg: string }>()
-
-const count = ref(0)
 </script>
 
 <template>
-    <div class="py-12 px-4">
-        <div class="max-w-4xl mx-auto">
-            <!-- Header Section -->
-            <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
-                    {{ msg }}
-                </h1>
-                <p class="text-gray-600 dark:text-gray-300 text-xl max-w-2xl mx-auto">
-                    Welcome to your Vue.js application with Tailwind CSS and modular components
-                </p>
+   <section class="relative mt-20 bg-gradient-to-b from-white to-[#eacfd1] py-16 overflow-hidden">
+    <!-- Graphic Section (background, lowest layer) -->
+      <div class="absolute left-0 w-full flex gap-4 justify-center z-0 pointer-events-none ml-60 mt-40">
+         <div v-for="i in 4" :key="'pale2-' + i" class="w-24 h-48 skew-x-[-20deg]" style="background: linear-gradient(to bottom, #fff, #ebd0d3);"></div>
+         <!-- Three red parallelograms -->
+         <div class="w-24 h-48 skew-x-[-20deg]" style="background: linear-gradient(to bottom, #fff, #ebd0d3);"></div>
+         <div class="flex gap-2">
+            <div class="w-24 h-48 bg-[#9c111d] skew-x-[-20deg] translate-y-4"></div>
+            <div class="w-24 h-66 bg-[#9c111d] skew-x-[-20deg]"></div>
+            <div class="w-24 h-86 bg-[#9c111d] skew-x-[-20deg] -translate-y-4"></div>
+         </div>
+         <!-- Three #ebd0d3 parallelograms -->
+         <div v-for="i in 2" :key="'pale2b-' + i" class="w-24 h-68 skew-x-[-20deg]" style="background: linear-gradient(to bottom, #fff, #ebd0d3);"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+      <!-- Text Section -->
+      <div class="max-w-xl">
+         <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+            Build Apps 3–5× Faster with <br />
+            Low-Code/No-Code Development
+         </h1>
+         <p class="text-gray-600 mt-4 text-lg">
+            Cut your dev costs by up to 50% and launch faster with scalable, cross-platform apps
+            built on Bubble, FlutterFlow, or your preferred tools.
+         </p>
+         <div class="mt-6 flex flex-wrap gap-4">
+            <button class="bg-[#9c111d] hover:bg-red-700 text-white font-semibold py-3 px-6 rounded shadow">
+            Let’s talk about your idea
+            </button>
+            <button class="border border-red-600 text-red-600 font-semibold py-3 px-6 rounded shadow hover:bg-red-50">
+            View a live demo
+            </button>
+         </div>
+
+         <!-- Badges -->
+         <div class="mt-10 flex gap-10 items-center flex-wrap">
+            <div class="text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Clutch_logo_2020.svg" alt="Clutch" class="h-6 mx-auto mb-1" />
+            <p class="text-xs text-gray-500">BASED ON REVIEWS</p>
             </div>
-
-            <!-- Main Content Cards -->
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <!-- Interactive Card -->
-                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-200 dark:border-gray-700">
-                    <div class="text-center">
-                        <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
-                            Interactive Counter
-                        </h3>
-                        <button
-                            type="button"
-                            @click="count++"
-                            class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg mb-6 text-lg"
-                        >
-                            Count is {{ count }}
-                        </button>
-
-                        <p class="text-gray-600 dark:text-gray-300">
-                            Edit
-                            <code class="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-sm font-mono">
-                                components/HelloWorld.vue
-                            </code>
-                            to test HMR
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Features Card -->
-                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-200 dark:border-gray-700">
-                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6">
-                        🚀 Features
-                    </h3>
-                    <ul class="space-y-3 text-gray-600 dark:text-gray-300">
-                        <li class="flex items-center">
-                            <span class="text-green-500 mr-3">✓</span>
-                            Vue 3 with Composition API
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-green-500 mr-3">✓</span>
-                            TypeScript Support
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-green-500 mr-3">✓</span>
-                            Tailwind CSS v4
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-green-500 mr-3">✓</span>
-                            Modular Components
-                        </li>
-                        <li class="flex items-center">
-                            <span class="text-green-500 mr-3">✓</span>
-                            Dark Mode Support
-                        </li>
-                    </ul>
-                </div>
+            <div class="text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Upwork-logo.svg" alt="Upwork" class="h-6 mx-auto mb-1" />
+            <p class="text-xs text-gray-500">TOP RATED</p>
             </div>
-
-            <!-- Links Section -->
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-3">
-                        🚀 Quick Start
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">
-                        Check out the official Vue + Vite starter
-                    </p>
-                    <a
-                        href="https://vuejs.org/guide/quick-start.html#local"
-                        target="_blank"
-                        class="inline-flex items-center text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium transition-colors duration-200"
-                    >
-                        Learn More →
-                    </a>
-                </div>
-
-                <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-3">
-                        🛠️ IDE Support
-                    </h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-4">
-                        Learn more about IDE Support for Vue
-                    </p>
-                    <a
-                        href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support"
-                        target="_blank"
-                        class="inline-flex items-center text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium transition-colors duration-200"
-                    >
-                        View Guide →
-                    </a>
-                </div>
+            <div class="text-center">
+            <img src="https://uploads-ssl.webflow.com/5d82e6bb3b7b6b8ecbfb9b46/631f024cb2a13990f4232f8d_bubble-logo.svg" alt="Bubble" class="h-6 mx-auto mb-1" />
+            <p class="text-xs text-gray-500">TRUST AGENCY</p>
             </div>
-        </div>
-    </div>
+         </div>
+
+         <!-- Stats -->
+         <div class="mt-8 flex gap-10 text-center">
+            <div>
+            <p class="text-2xl font-bold text-gray-900">30+</p>
+            <p class="text-gray-600 text-sm">MVPs launched</p>
+            </div>
+            <div>
+            <p class="text-2xl font-bold text-gray-900">50+</p>
+            <p class="text-gray-600 text-sm">Tools mastered</p>
+            </div>
+            <div>
+            <p class="text-2xl font-bold text-gray-900">95%</p>
+            <p class="text-gray-600 text-sm">Clients satisfaction</p>
+            </div>
+         </div>
+      </div>
+      <!-- The right side is intentionally left empty or can be used for an image/illustration if needed -->
+      <div class="w-full md:w-1/2"></div>
+      </div>
+  </section>
 </template>
 
-<style scoped>
-/* Custom styles can be added here if needed */
-</style>

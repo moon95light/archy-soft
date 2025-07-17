@@ -11,7 +11,7 @@ import Footer from './components/Footer.vue'
 
         <!-- Main Content -->
         <main class="flex-1">
-            <HelloWorld msg="Vite + Vue" />
+            <HelloWorld />
         </main>
 
         <!-- Footer -->
