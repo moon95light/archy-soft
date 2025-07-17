@@ -11,3 +11,10 @@
    font-family: 'MyFont', sans-serif;
    font-size: 12px;
 }
+
+.font-size-level1 {
+   font-size: 12px;
+}
+.font-size-level2 {
+   font-size: 13.5px;
+}
