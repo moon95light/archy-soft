@@ -68,6 +68,7 @@
          <div>
             <p class="text-2xl font-bold text-gray-900 font-size-level4">95%</p>
             <p class="text-gray-600 font-size-level3">Clients satisfaction</p>
+
          </div>
       </div>
   </section>
