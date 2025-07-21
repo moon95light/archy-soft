@@ -5,21 +5,6 @@ import mvpDevelopmentImg from '../assets/images/MVP-Development.webp'
 import outstaffImg from '../assets/images/Outstaff-outsource.webp'
 import salesManagerImg from '../assets/images/image.webp'
 
-const hover = ref(false)
-
-const services = [
-  'API Integration',
-  'Custom Workflows',
-  'User Management',
-  'Reporting',
-  'Real-time Sync'
-]
-const benefits = [
-  'Fast Delivery',
-  'Secure',
-  'Scalable',
-  'Customizable'
-]
 </script>
 
 <template>
@@ -183,7 +168,7 @@ const benefits = [
         <span class="text-xl font-semibold text-yellow-800">Third Child - Tallest (h-64)</span>
       </div>
     </div>
-  </section>
+   </section>
 </template>
 <style scoped>
 .fade-enter-active, .fade-leave-active { transition: opacity 0.3s; }
