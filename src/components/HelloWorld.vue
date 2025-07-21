@@ -1,9 +1,11 @@
 <script setup>
+import {ref} from 'vue'
 import mobileAppImg from '../assets/images/Mobile-App-Development.webp'
 import nolowCodeImg from '../assets/images/no-code-development.webp'
 import mvpDevelopmentImg from '../assets/images/MVP-Development.webp'
 import outstaffImg from '../assets/images/Outstaff-outsource.webp'
 import salesManagerImg from '../assets/images/image.webp'
+const hover = ref(false)
 
 </script>
 
@@ -123,9 +125,9 @@ import salesManagerImg from '../assets/images/image.webp'
       <div class="relative h-96 w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer bg-cover bg-center"
         :style="{ backgroundImage: `url('${mobileAppImg}')` }">
         <!-- Top part (empty, just for layout) -->
-        <div class="h-1/2"></div>
-        <!-- Bottom part (content) -->
-        <div class="absolute left-0 bottom-0 w-full bg-[rgba(113,11,19,0.8)] p-6 rounded-b-xl transition-all duration-500 ease-in-out group-hover:h-full group-hover:rounded-xl flex flex-col justify-end">
+         <div class="h-1/2"></div>
+         <!-- Bottom part (content) -->
+         <div class="absolute left-0 bottom-0 h-1/2 w-full bg-[rgba(113,11,19,0.8)] p-6 rounded-b-xl transition-all duration-500 ease-in-out group-hover:h-full group-hover:rounded-xl flex flex-col justify-end">
             <div class="flex flex-col">
                <h3 class="text-xl font-style-level1 text-white mb-2">Web App Development</h3>
                <p class="font-style-level3 text-white mb-2">Build scalable business apps 3–5x faster using no-code tools.</p>
