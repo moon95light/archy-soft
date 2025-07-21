@@ -46,3 +46,8 @@
    color: white;
    font-weight: 650;
 }
+.font-style-level4 {
+   font-family: 'MyFont1', sans-serif;
+   font-size: 12px;
+   color: black;
+}

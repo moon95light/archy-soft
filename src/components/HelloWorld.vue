@@ -6,7 +6,8 @@ import mvpDevelopmentImg from '../assets/images/MVP-Development.webp'
 import outstaffImg from '../assets/images/Outstaff-outsource.webp'
 import salesManagerImg from '../assets/images/image.webp'
 const hover = ref(false)
-
+const show = ref(false)
+setTimeout(() => (show.value = true), 150)
 </script>
 
 <template>
@@ -154,7 +155,7 @@ const hover = ref(false)
          </svg>
       </div>
    </section>
-   <section class="max-w-6xl mt-20 mx-auto px-4 py-12 flex flex-col md:flex-row gap-8">
+   <section class="relative max-w-7xl mt-20 mx-auto px-4 py-12 flex flex-col md:flex-row gap-8">
       <!-- Left Side -->
       <div class="md:w-1/2 flex flex-col gap-6">
          <!-- Child 1 -->
@@ -187,15 +188,15 @@ const hover = ref(false)
 
                <!-- Details part -->
                <div class="flex flex-col">
-                  <div class="flex items-center w-full">
-                     <!-- Text part (2/3) -->
+                  <div v-if="!hover" class="flex items-center w-full">
+                     <!-- Text part (3/5) -->
                      <div class="w-3/5">
                         <span class="font-style-level3">
                            Ideal for CRMs, portals, ERPs, or HMS platforms — with secure infrastructure and fast
                            delivery.
                         </span>
                      </div>
-                     <!-- Button part (1/3) -->
+                     <!-- Button part (2/5) -->
                      <div class="w-2/5 flex justify-end">
                         <button
                            class="flex flex-col items-start justify-center px-4 py-2 bg-white rounded-lg shadow font-bold text-[#710B13] leading-tight tracking-tight transition hover:bg-gray-100 min-w-[177px] min-h-[18px]">
@@ -215,16 +216,56 @@ const hover = ref(false)
                         </button>
                      </div>
                   </div>
-                  <!-- Extended details list appears below only on hover -->
-                  <transition name="fade">
-                     <div v-if="hover" class="w-full mt-4">
-                        <ul class="list-disc pl-5 space-y-1">
-                           <li>Feature A: Descriptive text here</li>
-                           <li>Feature B: More details here</li>
-                           <li>Feature C: Even more text</li>
-                        </ul>
+                  <div v-if="hover" class="flex flex-col gap-4">
+                     <!-- Details Text -->
+                     <span class="font-style-level3">
+                        Ideal for CRMs, portals, ERPs, or HMS platforms — with secure infrastructure and fast delivery.
+                     </span>
+                     <!-- Service Part -->
+                     <div>
+                        <p class="font-style-level3 mb-1">Service include:</p>
+                        <div class="w-full flex flex-row gap-4">
+                           <div class="flex w-1/2">
+                              <ul class="flex flex-wrap gap-2">
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Support &amp; Maintain
+                                    Existing Solutions</li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Configurable Business
+                                    Workflows</li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Process Optimizations</li>
+                              </ul>
+                           </div>
+                           <div class="flex w-1/2">
+                              <ul class="flex flex-wrap gap-2">
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">App Modernization</li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Integration with Existing
+                                    Systems</li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">APIs Integrations</li>
+                              </ul>
+                           </div>
+                        </div>
                      </div>
-                  </transition>
+                     <!-- Benefit Part -->
+                     <div
+                        class="flex flex-row items-end justify-between transition-all duration-300 opacity-0" :class="{ 'opacity-100 visible': show }">
+                        <div>
+                           <p class="font-semibold text-neutral-900 mb-2">Benefits:</p>
+                           <ul class="grid grid-cols-2 gap-x-8 gap-y-2 text-neutral-900 text-[15px]">
+                              <li>Fast Delivery</li>
+                              <li>Scalable Architecture</li>
+                              <li>Custom Solutions</li>
+                              <li>Secure Infrastructure</li>
+                           </ul>
+                        </div>
+                        <a href="https://www.archysoft.com/services/creating-custom-web/"
+                           class="ml-6 inline-flex items-center px-8 py-3 rounded border-2 border-[#710B13] text-[#710B13] font-bold bg-white hover:bg-[#710B13] hover:text-white transition-colors duration-200 group">
+                           <span>VIEW MORE</span>
+                           <svg class="ml-2 w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
