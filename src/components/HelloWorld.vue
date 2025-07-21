@@ -176,7 +176,7 @@ setTimeout(() => (show.value = true), 150)
 
             <!-- Bottom Part (content) -->
             <div
-               class="absolute left-0 right-0 bottom-0 bg-[rgba(156,17,29,0.8)] transition-all duration-500 flex flex-col overflow-hidden"
+               class="absolute left-0 right-0 bottom-0 bg-[rgba(113,11,19,0.8)] transition-all duration-500 flex flex-col overflow-hidden"
                :style="hover
                   ? 'top:0; height:100%; padding:2rem;'
                   : 'top:50%; height:50%; padding:1.5rem;'" style="z-index:1">
@@ -224,7 +224,7 @@ setTimeout(() => (show.value = true), 150)
                      <!-- Service Part -->
                      <div>
                         <p class="font-style-level3 mb-1">Service include:</p>
-                        <div class="w-full flex flex-row gap-4">
+                        <div class="w-full flex flex-row gap-4 mt-4">
                            <div class="flex w-1/2">
                               <ul class="flex flex-wrap gap-2">
                                  <li class="bg-white font-style-level4 px-2 py-1 rounded">Support &amp; Maintain
@@ -245,19 +245,18 @@ setTimeout(() => (show.value = true), 150)
                         </div>
                      </div>
                      <!-- Benefit Part -->
-                     <div
-                        class="flex flex-row items-end justify-between transition-all duration-300 opacity-0" :class="{ 'opacity-100 visible': show }">
+                     <div class="flex flex-row items-end justify-between">
                         <div>
-                           <p class="font-semibold text-neutral-900 mb-2">Benefits:</p>
-                           <ul class="grid grid-cols-2 gap-x-8 gap-y-2 text-neutral-900 text-[15px]">
-                              <li>Fast Delivery</li>
-                              <li>Scalable Architecture</li>
-                              <li>Custom Solutions</li>
-                              <li>Secure Infrastructure</li>
+                           <p class="font-style-level3 mb-4">Benefits:</p>
+                           <ul class="grid grid-cols-2 gap-x-8 gap-y-2 font-style-level5">
+                              <li>• Fast Delivery</li>
+                              <li>• Scalable Architecture</li>
+                              <li>• Custom Solutions</li>
+                              <li>• Secure Infrastructure</li>
                            </ul>
                         </div>
-                        <a href="https://www.archysoft.com/services/creating-custom-web/"
-                           class="ml-6 inline-flex items-center px-8 py-3 rounded border-2 border-[#710B13] text-[#710B13] font-bold bg-white hover:bg-[#710B13] hover:text-white transition-colors duration-200 group">
+                        <a href="/"
+                           class="ml-6 inline-flex items-center px-8 py-3 rounded-xl text-[#710B13] font-bold bg-white hover:bg-[#ffffff] hover:text-[#cf2e2e] transition-colors duration-200">
                            <span>VIEW MORE</span>
                            <svg class="ml-2 w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none">
                               <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"
