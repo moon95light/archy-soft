@@ -1,4 +1,25 @@
-<script setup lang="ts">
+<script setup>
+import mobileAppImg from '../assets/images/Mobile-App-Development.webp'
+import nolowCodeImg from '../assets/images/no-code-development.webp'
+import mvpDevelopmentImg from '../assets/images/MVP-Development.webp'
+import outstaffImg from '../assets/images/Outstaff-outsource.webp'
+import salesManagerImg from '../assets/images/image.webp'
+
+const hover = ref(false)
+
+const services = [
+  'API Integration',
+  'Custom Workflows',
+  'User Management',
+  'Reporting',
+  'Real-time Sync'
+]
+const benefits = [
+  'Fast Delivery',
+  'Secure',
+  'Scalable',
+  'Customizable'
+]
 </script>
 
 <template>
@@ -56,7 +77,7 @@
          <!-- The right side is intentionally left empty or can be used for an image/illustration if needed -->
          <div class="w-full md:w-1/2"></div>
       </div>
-      <div class="relative z-10 max-w-7xl mt-10 mx-auto px-6 flex flex-col md:flex-row items-start justify-start gap-8">
+      <div class="relative z-10 max-w-7xl mt-10 mx-auto px-6 flex flex-col md:flex-row items-start justify-center gap-8">
          <svg width="64" height="101" viewBox="0 0 64 101" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M43.5444 0.50114C43.4446 0.505008 43.3453 0.517194 43.2471 0.537475C43.2471 0.537475 41.0042 0.98855 38.4111 1.85702C35.8182 2.72549 32.8357 3.84485 31.0048 6.02847C29.4723 7.85579 29.0432 10.2869 28.7318 12.399C28.5763 13.4551 28.4847 14.4267 28.4274 15.1588C28.3984 15.5249 28.3799 15.8315 28.3637 16.0456C28.3491 16.2596 28.268 16.586 28.3708 16.1731C28.2986 16.4633 28.2991 16.7669 28.3722 17.0569C28.4453 17.3469 28.5887 17.6144 28.7898 17.8355C28.9908 18.0565 29.2434 18.2245 29.5247 18.3242C29.8063 18.4243 30.108 18.4527 30.4031 18.4077C30.4031 18.4077 31.6959 18.2132 33.2706 17.8614C34.8453 17.5099 36.669 17.0627 38.1138 16.2937C39.9168 15.334 41.7808 13.9941 42.9995 12.0016C44.0689 10.2531 44.546 8.00654 44.904 6.05662C45.2622 4.10668 45.4139 2.48819 45.4139 2.48819C45.4382 2.23092 45.4076 1.97141 45.3237 1.72699C45.2399 1.48259 45.105 1.25892 44.928 1.07089C44.7512 0.882862 44.5364 0.734842 44.2978 0.636697C44.059 0.538552 43.8023 0.491939 43.5444 0.50114ZM41.4204 4.79317C41.3724 5.09429 41.395 5.06666 41.3354 5.39619C41.0084 7.1767 40.4077 9.29682 39.9121 10.1068C39.2004 11.2705 37.8744 12.3023 36.4145 13.0793C35.6831 13.4686 33.9347 13.99 32.4846 14.3137C32.3054 14.3537 32.3288 14.3428 32.1592 14.3777C32.2066 13.8983 32.2356 13.4683 32.315 12.9304C32.5897 11.0638 33.2391 9.00764 33.7808 8.36171C34.5717 7.41847 37.199 6.09431 39.5586 5.30407C40.5544 4.97064 40.665 4.99123 41.4204 4.79317Z" fill="#9C111D"></path>
             <path d="M15.2437 10.4111C14.9251 10.4207 14.6146 10.5143 14.3436 10.6825C14.0726 10.8506 13.8507 11.0873 13.7001 11.3688C13.7001 11.3688 12.7803 13.0787 11.9016 15.2494C11.023 17.4201 10.0795 19.9697 10.2873 22.4147C10.5059 24.9883 11.9567 27.5135 13.2753 29.6438C14.5938 31.7739 15.8668 33.4107 15.8668 33.4107L18.7274 31.1762C18.7274 31.1762 17.5606 29.6756 16.3554 27.7282C15.1502 25.781 13.9988 23.2848 13.8984 22.1025C13.8088 21.0489 14.4671 18.5826 15.2649 16.6115C15.5876 15.8144 15.6467 15.7716 15.9234 15.1856C16.204 15.4358 16.2037 15.4049 16.5182 15.7034C17.7647 16.8863 19.1315 18.4732 19.5062 19.2648C19.6567 19.5823 19.9105 20.8641 19.9877 21.9179C20.0649 22.9718 20.0516 23.8405 20.0516 23.8405L23.6768 23.8905C23.6768 23.8905 23.695 22.882 23.6061 21.6557C23.5162 20.4292 23.4082 19.028 22.7848 17.7114C21.937 15.9204 20.3827 14.3734 19.0108 13.0716C17.639 11.7698 16.4264 10.8014 16.4264 10.8014C16.0906 10.5356 15.6715 10.3972 15.2437 10.4111Z" fill="#9C111D"></path>
@@ -100,5 +121,71 @@
             <path d="M23.0339 78.5766C22.4722 78.5799 21.9427 78.8379 21.5961 79.2778C21.5961 79.2778 20.1952 81.0417 18.7059 83.3402C17.2169 85.6387 15.5741 88.379 15.1258 91.036C14.731 93.3768 15.2958 96.0272 15.8519 98.2886C16.4079 100.55 17.0452 102.358 17.0452 102.358L20.5175 101.15C20.5175 101.15 20.242 100.157 20.1152 99.762L22.8468 101.55C22.8468 101.55 24.0828 100.372 25.3344 98.3744C26.5857 96.377 27.9759 94.0206 28.21 91.5725C28.458 88.9785 27.4817 86.1897 26.5635 83.8193C25.6454 81.449 24.68 79.5781 24.68 79.5781C24.3653 78.9619 23.7286 78.5747 23.0339 78.5766ZM22.6671 84.0984C22.8799 84.5885 22.9031 84.5567 23.1274 85.1353C23.968 87.3059 24.6596 90.0078 24.5436 91.2221C24.4414 92.2901 23.352 94.6206 22.2143 96.4361C21.1142 98.1919 20.1194 99.4592 20.0505 99.5475C19.8343 98.8647 19.7234 98.6011 19.4322 97.4161C18.9215 95.3396 18.5648 92.7793 18.7563 91.6441C19.001 90.1925 20.4117 87.4672 21.7974 85.3286C22.2471 84.6344 22.2768 84.6489 22.6671 84.0984Z" fill="#9C111D"></path>
          </svg>
       </div>
+   </section>
+   <section class="max-w-6xl mt-20 mx-auto px-4 py-12 flex flex-col md:flex-row gap-8">
+    <!-- Left Side -->
+    <div class="md:w-1/2 flex flex-col gap-6">
+      <!-- Child 1 -->
+      <div class="rounded-xl h-56">
+        <h2 class="font-style-level1 mb-2 text-left">
+          What You Can Build with Our Low Code/No Code Development Services
+        </h2>
+        <p class="text-gray-700 mt-6 text-[19px] font-style-level2">
+          Build and launch custom applications 3–5× faster with low-code or no-code tools tailored to your goals.
+        </p>
+      </div>
+      <!-- Child 2 -->
+      <div class="relative h-96 w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer bg-cover bg-center"
+        :style="{ backgroundImage: `url('${mobileAppImg}')` }">
+        <!-- Top part (empty, just for layout) -->
+        <div class="h-1/2"></div>
+        <!-- Bottom part (content) -->
+        <div class="absolute left-0 bottom-0 w-full bg-[rgba(113,11,19,0.8)] p-6 rounded-b-xl transition-all duration-500 ease-in-out group-hover:h-full group-hover:rounded-xl flex flex-col justify-end">
+            <div class="flex flex-col">
+               <h3 class="text-xl font-style-level1 text-white mb-2">Web App Development</h3>
+               <p class="font-style-level3 text-white mb-2">Build scalable business apps 3–5x faster using no-code tools.</p>
+            </div>
+            <!-- Details: hidden by default, shown on hover -->
+            <div class="opacity-0 max-h-0 overflow-hidden transition-all duration-500 group-hover:opacity-100 group-hover:max-h-[400px] mt-2">
+               <p class="text-gray-600 mb-2">
+               Ideal for CRMs, portals, ERPs, or HMS platforms — with secure infrastructure and fast delivery.
+               </p>
+
+               <a href="/" class="inline-flex items-center px-4 py-2 bg-[#710B13] text-white rounded font-semibold text-sm shadow hover:bg-[#87090e] transition">
+               VIEW MORE
+               <svg class="ml-1" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+               </svg>
+               </a>
+            </div>
+        </div>
+      </div>
+      <!-- Child 3 -->
+      <div class="bg-green-100 rounded-xl shadow p-6 h-100 flex items-center bg-cover bg-center" :style="{ backgroundImage: `url('${nolowCodeImg}')` }">
+        <span class="text-xl font-semibold text-green-800">Second Child - Medium (h-48)</span>
+      </div>
+    </div>
+
+    <!-- Right Side: 3 children with different heights -->
+    <div class="md:w-1/2 flex flex-col gap-6">
+      <!-- Child 1 -->
+      <div class="bg-blue-100 rounded-xl shadow p-6 h-100 flex items-center bg-cover bg-center"
+      :style="{ backgroundImage: `url('${mvpDevelopmentImg}')` }">
+        <span class="text-xl font-semibold text-blue-800">First Child - Shortest (h-32)</span>
+      </div>
+      <!-- Child 2 -->
+      <div class="bg-green-100 rounded-xl shadow p-6 h-100 flex items-center bg-cover bg-center"
+      :style="{ backgroundImage: `url('${outstaffImg}')` }">
+        <span class="text-xl font-semibold text-green-800">Second Child - Medium (h-48)</span>
+      </div>
+      <!-- Child 3 -->
+      <div class="bg-yellow-100 rounded-xl shadow p-6 h-56 flex items-center">
+        <span class="text-xl font-semibold text-yellow-800">Third Child - Tallest (h-64)</span>
+      </div>
+    </div>
   </section>
 </template>
+<style scoped>
+.fade-enter-active, .fade-leave-active { transition: opacity 0.3s; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
+</style>
