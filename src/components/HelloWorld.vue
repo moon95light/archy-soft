@@ -7,7 +7,8 @@ import outstaffImg from '../assets/images/Outstaff-outsource.webp'
 import salesManagerImg from '../assets/images/image.webp'
 const hover2 = ref(false)
 const hover3 = ref(false)
-
+const hover4 = ref(false)
+const hover5 = ref(false)
 </script>
 
 <template>
@@ -284,9 +285,11 @@ const hover3 = ref(false)
                <!-- Title & Description -->
                <div>
                   <h2 class="font-style-level1 text-white mb-2">No-Code & Low-Code...</h2>
-                  <p v-if="!hover3" class="font-style-level3 mb-3 truncate">Deliver production-ready apps 4× faster and cut development costs by up to 70 % using Bubble, FlutterFlow, Webflow and other visual platforms.
+                  <p v-if="!hover3" class="font-style-level3 mb-3 truncate">Deliver production-ready apps 4× faster and
+                     cut development costs by up to 70 % using Bubble, FlutterFlow, Webflow and other visual platforms.
                   </p>
-                  <p v-else class="font-style-level3 mb-3">Deliver production-ready apps 4× faster and cut development costs by up to 70 % using Bubble, FlutterFlow, Webflow...</p>
+                  <p v-else class="font-style-level3 mb-3">Deliver production-ready apps 4× faster and cut development
+                     costs by up to 70 % using Bubble, FlutterFlow, Webflow...</p>
                </div>
 
                <!-- Details part -->
@@ -295,7 +298,8 @@ const hover3 = ref(false)
                      <!-- Text part (3/5) -->
                      <div class="w-3/5">
                         <span class="font-style-level3">
-                           Ideal for MVPs, customer portals and internal tools — built on secure, scalable infrastructure.
+                           Ideal for MVPs, customer portals and internal tools — built on secure, scalable
+                           infrastructure.
                         </span>
                      </div>
                      <!-- Button part (2/5) -->
@@ -336,8 +340,10 @@ const hover3 = ref(false)
                            </div>
                            <div class="flex w-1/2">
                               <ul class="flex flex-wrap gap-2">
-                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Workflow & Process Automation</li>
-                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Custom UI / UX Development</li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Workflow & Process Automation
+                                 </li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Custom UI / UX Development
+                                 </li>
                                  <li class="bg-white font-style-level4 px-2 py-1 rounded">Hybrid-Code & Scaling</li>
                               </ul>
                            </div>
@@ -372,19 +378,243 @@ const hover3 = ref(false)
       <!-- Right Side: 3 children with different heights -->
       <div class="md:w-1/2 flex flex-col gap-6">
          <!-- Child 1 -->
-         <div class="bg-blue-100 rounded-xl shadow p-6 h-115 flex items-center bg-cover bg-center"
-            :style="{ backgroundImage: `url('${mvpDevelopmentImg}')` }">
-            <span class="text-xl font-semibold text-blue-800">First Child - Shortest (h-32)</span>
+         <div :style="{ backgroundImage: `url('${mvpDevelopmentImg}')` }"
+            class="relative h-115 w-full rounded-xl overflow-hidden shadow-lg group bg-cover bg-center"
+            @mouseenter="hover4 = true" @mouseleave="hover4 = false">
+            <!-- Top Part (empty) -->
+            <div class="h-1/2"></div>
+
+            <!-- Bottom Part (content) -->
+            <div
+               class="absolute left-0 right-0 bottom-0 bg-[rgba(113,11,19,0.8)] backdrop-blur-[12px] transition-all duration-500 flex flex-col overflow-hidden"
+               :style="hover4
+                  ? 'top:0; height:100%; padding:2rem;'
+                  : 'top:50%; height:50%; padding:2rem;'" style="z-index:1">
+               <!-- Title & Description -->
+               <div>
+                  <h2 class="font-style-level1 text-white mb-2">MVP Development</h2>
+                  <p v-if="!hover4" class="font-style-level3 mb-3 truncate">No-code MVPs help startups test ideas,
+                     gather user feedback, or pitch investors faster and cheaper. </p>
+                  <p v-else class="font-style-level3 mb-3">No-code MVPs help startups test ideas, gather user feedback,
+                     or pitch investors faster and cheaper.</p>
+               </div>
+
+               <!-- Details part -->
+               <div class="flex flex-col">
+                  <div v-if="!hover4" class="flex items-center w-full">
+                     <!-- Text part (3/5) -->
+                     <div class="w-3/5">
+                        <span class="font-style-level3">
+                           Build only what matters, skip heavy engineering, and go live in weeks.
+                        </span>
+                     </div>
+                     <!-- Button part (2/5) -->
+                     <div class="w-2/5 flex justify-end">
+                        <button
+                           class="flex flex-col items-start justify-center px-4 py-2 bg-white rounded-lg shadow font-bold text-[#710B13] leading-tight tracking-tight transition hover:bg-gray-100 min-w-[177px] min-h-[18px]">
+                           <span class="flex items-center w-full justify-between">
+                              <span class="flex flex-col ml-2">
+                                 <span>VIEW</span>
+                                 <span>MORE</span>
+                              </span>
+                              <span class="ml-4">
+                                 <!-- Arrow icon (SVG) -->
+                                 <svg width="25" height="25" fill="none" viewBox="0 0 24 24">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#710B13" stroke-width="1.5"
+                                       stroke-linecap="round" stroke-linejoin="round" />
+                                 </svg>
+                              </span>
+                           </span>
+                        </button>
+                     </div>
+                  </div>
+                  <div v-if="hover4" class="flex flex-col gap-4">
+                     <!-- Details Text -->
+                     <span class="font-style-level3">
+                        Build only what matters, skip heavy engineering, and go live in weeks.
+                     </span>
+                     <!-- Service Part -->
+                     <div>
+                        <p class="font-style-level3 mb-1">Service include:</p>
+                        <div class="w-full flex flex-row gap-4 mt-4">
+                           <div class="flex w-1/2">
+                              <ul class="flex flex-wrap gap-2">
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Core Feature Implementation
+                                 </li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">UI Prototyping
+                                 </li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Cross-Platform Delivery
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="flex w-1/2">
+                              <ul class="flex flex-wrap gap-2">
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Platform Selection
+                                 </li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Backend Configuration
+                                 </li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Fast Iteration Cycles
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Benefit Part -->
+                     <div class="flex flex-row items-end justify-between">
+                        <div>
+                           <p class="font-style-level3 mb-2">Benefits:</p>
+                           <ul class="grid grid-cols-2 gap-y-2 gap-x-1 font-style-level5">
+                              <li>• Quick Launch</li>
+                              <li>• User Testing Ready</li>
+                              <li>• Lower Dev Cost</li>
+                              <li>• Investor-Friendly</li>
+                           </ul>
+                        </div>
+                        <a href="/"
+                           class="ml-6 inline-flex items-center px-8 py-3 rounded-xl text-[#710B13] font-bold bg-white hover:bg-[#ffffff] hover:text-[#cf2e2e] transition-colors duration-200">
+                           <span>VIEW MORE</span>
+                           <svg class="ml-2 w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
          <!-- Child 2 -->
-         <div class="bg-green-100 rounded-xl shadow p-6 h-115 flex items-center bg-cover bg-center"
-            :style="{ backgroundImage: `url('${outstaffImg}')` }">
-            <span class="text-xl font-semibold text-green-800">Second Child - Medium (h-48)</span>
+         <div :style="{ backgroundImage: `url('${outstaffImg}')` }"
+            class="relative h-115 w-full rounded-xl overflow-hidden shadow-lg group bg-cover bg-center"
+            @mouseenter="hover5 = true" @mouseleave="hover5 = false">
+            <!-- Top Part (empty) -->
+            <div class="h-1/2"></div>
+
+            <!-- Bottom Part (content) -->
+            <div
+               class="absolute left-0 right-0 bottom-0 bg-[rgba(113,11,19,0.8)] backdrop-blur-[12px] transition-all duration-500 flex flex-col overflow-hidden"
+               :style="hover5
+                  ? 'top:0; height:100%; padding:2rem;'
+                  : 'top:50%; height:50%; padding:2rem;'" style="z-index:1">
+               <!-- Title & Description -->
+               <div>
+                  <h2 class="font-style-level1 text-white mb-2">IT Outstaff & Augmentation</h2>
+                  <p v-if="!hover5" class="font-style-level3 mb-3 truncate">Extend your team with experienced no-code
+                     developers, designers, and project managers.
+                  </p>
+                  <p v-else class="font-style-level3 mb-3">Extend your team with experienced no-code developers,
+                     designers, and project managers.
+                  </p>
+               </div>
+
+               <!-- Details part -->
+               <div class="flex flex-col">
+                  <div v-if="!hover5" class="flex items-center w-full">
+                     <!-- Text part (3/5) -->
+                     <div class="w-3/5">
+                        <span class="font-style-level3">
+                           Scale faster and stay flexible without long hiring cycles or overhead.
+                        </span>
+                     </div>
+                     <!-- Button part (2/5) -->
+                     <div class="w-2/5 flex justify-end">
+                        <button
+                           class="flex flex-col items-start justify-center px-4 py-2 bg-white rounded-lg shadow font-bold text-[#710B13] leading-tight tracking-tight transition hover:bg-gray-100 min-w-[177px] min-h-[18px]">
+                           <span class="flex items-center w-full justify-between">
+                              <span class="flex flex-col ml-2">
+                                 <span>VIEW</span>
+                                 <span>MORE</span>
+                              </span>
+                              <span class="ml-4">
+                                 <!-- Arrow icon (SVG) -->
+                                 <svg width="25" height="25" fill="none" viewBox="0 0 24 24">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#710B13" stroke-width="1.5"
+                                       stroke-linecap="round" stroke-linejoin="round" />
+                                 </svg>
+                              </span>
+                           </span>
+                        </button>
+                     </div>
+                  </div>
+                  <div v-if="hover5" class="flex flex-col gap-4">
+                     <!-- Details Text -->
+                     <span class="font-style-level3">
+                        Scale faster and stay flexible without long hiring cycles or overhead.
+                     </span>
+                     <!-- Service Part -->
+                     <div>
+                        <p class="font-style-level3 mb-1">Service include:</p>
+                        <div class="w-full flex flex-row gap-4 mt-4">
+                           <div class="flex w-1/2">
+                              <ul class="flex flex-wrap gap-2">
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">No-Code Developer Leasing
+                                 </li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Technical Project Management
+                                 </li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Ongoing Maintenance
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="flex w-1/2">
+                              <ul class="flex flex-wrap gap-2">
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Design & UX Support
+                                 </li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Dedicated Teams
+                                 </li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Staff Scaling on Demand
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Benefit Part -->
+                     <div class="flex flex-row items-end justify-between">
+                        <div>
+                           <p class="font-style-level3 mb-2">Benefits:</p>
+                           <ul class="grid grid-cols-2 gap-y-2 gap-x-1 font-style-level5">
+                              <li>• Flexible Team Size
+                              </li>
+                              <li>• Tool Expertise
+                              </li>
+                              <li>• Fast Onboarding
+                              </li>
+                              <li>• Senior-Level Quality
+                              </li>
+                           </ul>
+                        </div>
+                        <a href="/"
+                           class="ml-6 inline-flex items-center px-8 py-3 rounded-xl text-[#710B13] font-bold bg-white hover:bg-[#ffffff] hover:text-[#cf2e2e] transition-colors duration-200">
+                           <span>VIEW MORE</span>
+                           <svg class="ml-2 w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
          <!-- Child 3 -->
-         <div class="bg-yellow-100 rounded-xl shadow p-6 h-56 flex items-center">
-            <span class="text-xl font-semibold text-yellow-800">Third Child - Tallest (h-64)</span>
+         <div
+            class="flex flex-col items-start h-56 p-7 md:p-8 gap-5 border border-gray-300 rounded-2xl text-[18px] leading-7">
+            <p class="font-style-level2">Not sure which services fit your use case? Talk to an expert</p>
+            <div class="flex items-center justify-between w-full flex-wrap gap-4">
+               <div class="flex items-center gap-4">
+                  <img src="https://www.archysoft.com/wp-content/uploads/2025/06/image.png" alt="Sales Manager"
+                     class="w-20 h-20 rounded-2xl object-cover" />
+                  <div>
+                     <p class="font-style-level6">Michael</p>
+                     <span class="font-style-level7">Sales Manager</span>
+                  </div>
+               </div>
+               <a href="/"
+                  class="bg-[#9c111d] hover:bg-red-700 font-style-level8 px-5 py-2 rounded-lg transition">
+                  BOOK A CALL
+               </a>
+            </div>
          </div>
+
       </div>
    </section>
 </template>
