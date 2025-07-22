@@ -686,7 +686,7 @@ const selectedIndustry = computed(() => industries.find(i => i.key === selectedK
             <h2 class="font-style-level9 mb-4">
                Not sure where to start with no-code? Let’s talk.
             </h2>
-            <p class="text-gray-600 mb-6 max-w-lg">
+            <p class="text-gray-600 font-style-level15 mb-6 max-w-lg">
                Book a free 20-minute call with our product team — we’ll help you understand what’s possible, what
                tools to use, and how to launch faster.
             </p>

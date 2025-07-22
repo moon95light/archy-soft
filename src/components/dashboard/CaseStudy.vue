@@ -66,7 +66,7 @@ const hover2 = ref(false)
                <div class="h-3/5"></div>
                <div
                   class="absolute left-0 right-0 bottom-0 bg-[rgba(113,11,19,0.8)] backdrop-blur-[12px] transition-all duration-500 flex flex-col overflow-hidden"
-                  :style="hover2
+                  :style="hover1
                      ? 'top:0; height:100%; padding:2rem;'
                      : 'top:55%; height:50%; padding:2rem;'" style="z-index:1">
                   <!-- Title & Description -->
@@ -75,7 +75,7 @@ const hover2 = ref(false)
                      <div>
                         <p class="font-style-level3 mb-3">Resultls:</p>
                         <ul class="ml-4 space-y-1">
-                           <li class="list-dis                                                                                                                 c">2-Month MVP Delivery</li>
+                           <li class="list-disc">2-Month MVP Delivery</li>
                            <li class="list-disc">Cross-Platform Access</li>
                         </ul>
                      </div>
