@@ -5,9 +5,9 @@ import nolowCodeImg from '../assets/images/no-code-development.webp'
 import mvpDevelopmentImg from '../assets/images/MVP-Development.webp'
 import outstaffImg from '../assets/images/Outstaff-outsource.webp'
 import salesManagerImg from '../assets/images/image.webp'
-const hover = ref(false)
-const show = ref(false)
-setTimeout(() => (show.value = true), 150)
+const hover2 = ref(false)
+const hover3 = ref(false)
+
 </script>
 
 <template>
@@ -155,7 +155,7 @@ setTimeout(() => (show.value = true), 150)
          </svg>
       </div>
    </section>
-   <section class="relative max-w-7xl mt-20 mx-auto px-4 py-12 flex flex-col md:flex-row gap-8">
+   <section class="relative max-w-[1230px] mt-20 mx-auto px-4 py-12 flex flex-col md:flex-row gap-6">
       <!-- Left Side -->
       <div class="md:w-1/2 flex flex-col gap-6">
          <!-- Child 1 -->
@@ -169,17 +169,17 @@ setTimeout(() => (show.value = true), 150)
          </div>
          <!-- Child 2 -->
          <div :style="{ backgroundImage: `url('${mobileAppImg}')` }"
-            class="relative h-115 w-full rounded-xl overflow-hidden shadow-lg group cursor-pointer bg-cover bg-center"
-            @mouseenter="hover = true" @mouseleave="hover = false">
+            class="relative h-115 w-full rounded-xl overflow-hidden shadow-lg group bg-cover bg-center"
+            @mouseenter="hover2 = true" @mouseleave="hover2 = false">
             <!-- Top Part (empty) -->
             <div class="h-1/2"></div>
 
             <!-- Bottom Part (content) -->
             <div
-               class="absolute left-0 right-0 bottom-0 bg-[rgba(113,11,19,0.8)] transition-all duration-500 flex flex-col overflow-hidden"
-               :style="hover
+               class="absolute left-0 right-0 bottom-0 bg-[rgba(113,11,19,0.8)] backdrop-blur-[12px] transition-all duration-500 flex flex-col overflow-hidden"
+               :style="hover2
                   ? 'top:0; height:100%; padding:2rem;'
-                  : 'top:50%; height:50%; padding:1.5rem;'" style="z-index:1">
+                  : 'top:50%; height:50%; padding:2rem;'" style="z-index:1">
                <!-- Title & Description -->
                <div>
                   <h2 class="font-style-level1 text-white mb-2">Web App Development</h2>
@@ -188,7 +188,7 @@ setTimeout(() => (show.value = true), 150)
 
                <!-- Details part -->
                <div class="flex flex-col">
-                  <div v-if="!hover" class="flex items-center w-full">
+                  <div v-if="!hover2" class="flex items-center w-full">
                      <!-- Text part (3/5) -->
                      <div class="w-3/5">
                         <span class="font-style-level3">
@@ -216,7 +216,7 @@ setTimeout(() => (show.value = true), 150)
                         </button>
                      </div>
                   </div>
-                  <div v-if="hover" class="flex flex-col gap-4">
+                  <div v-if="hover2" class="flex flex-col gap-4">
                      <!-- Details Text -->
                      <span class="font-style-level3">
                         Ideal for CRMs, portals, ERPs, or HMS platforms — with secure infrastructure and fast delivery.
@@ -269,9 +269,103 @@ setTimeout(() => (show.value = true), 150)
             </div>
          </div>
          <!-- Child 3 -->
-         <div class="bg-green-100 rounded-xl shadow p-6 h-115 flex items-center bg-cover bg-center"
-            :style="{ backgroundImage: `url('${nolowCodeImg}')` }">
-            <span class="text-xl font-semibold text-green-800">Second Child - Medium (h-48)</span>
+         <div :style="{ backgroundImage: `url('${nolowCodeImg}')` }"
+            class="relative h-115 w-full rounded-xl overflow-hidden shadow-lg group bg-cover bg-center"
+            @mouseenter="hover3 = true" @mouseleave="hover3 = false">
+            <!-- Top Part (empty) -->
+            <div class="h-1/2"></div>
+
+            <!-- Bottom Part (content) -->
+            <div
+               class="absolute left-0 right-0 bottom-0 bg-[rgba(113,11,19,0.8)] backdrop-blur-[12px] transition-all duration-500 flex flex-col overflow-hidden"
+               :style="hover3
+                  ? 'top:0; height:100%; padding:2rem;'
+                  : 'top:50%; height:50%; padding:2rem;'" style="z-index:1">
+               <!-- Title & Description -->
+               <div>
+                  <h2 class="font-style-level1 text-white mb-2">No-Code & Low-Code...</h2>
+                  <p v-if="!hover3" class="font-style-level3 mb-3 truncate">Deliver production-ready apps 4× faster and cut development costs by up to 70 % using Bubble, FlutterFlow, Webflow and other visual platforms.
+                  </p>
+                  <p v-else class="font-style-level3 mb-3">Deliver production-ready apps 4× faster and cut development costs by up to 70 % using Bubble, FlutterFlow, Webflow...</p>
+               </div>
+
+               <!-- Details part -->
+               <div class="flex flex-col">
+                  <div v-if="!hover3" class="flex items-center w-full">
+                     <!-- Text part (3/5) -->
+                     <div class="w-3/5">
+                        <span class="font-style-level3">
+                           Ideal for MVPs, customer portals and internal tools — built on secure, scalable infrastructure.
+                        </span>
+                     </div>
+                     <!-- Button part (2/5) -->
+                     <div class="w-2/5 flex justify-end">
+                        <button
+                           class="flex flex-col items-start justify-center px-4 py-2 bg-white rounded-lg shadow font-bold text-[#710B13] leading-tight tracking-tight transition hover:bg-gray-100 min-w-[177px] min-h-[18px]">
+                           <span class="flex items-center w-full justify-between">
+                              <span class="flex flex-col ml-2">
+                                 <span>VIEW</span>
+                                 <span>MORE</span>
+                              </span>
+                              <span class="ml-4">
+                                 <!-- Arrow icon (SVG) -->
+                                 <svg width="25" height="25" fill="none" viewBox="0 0 24 24">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#710B13" stroke-width="1.5"
+                                       stroke-linecap="round" stroke-linejoin="round" />
+                                 </svg>
+                              </span>
+                           </span>
+                        </button>
+                     </div>
+                  </div>
+                  <div v-if="hover3" class="flex flex-col gap-4">
+                     <!-- Details Text -->
+                     <span class="font-style-level3">
+                        Ideal for CRMs, portals, ERPs, or HMS platforms — with secure infrastructure and fast delivery.
+                     </span>
+                     <!-- Service Part -->
+                     <div>
+                        <p class="font-style-level3 mb-1">Service include:</p>
+                        <div class="w-full flex flex-row gap-4 mt-4">
+                           <div class="flex w-1/2">
+                              <ul class="flex flex-wrap gap-2">
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Bubble.io development</li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">App Modernization</li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Reporting & Dashboards</li>
+                              </ul>
+                           </div>
+                           <div class="flex w-1/2">
+                              <ul class="flex flex-wrap gap-2">
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Workflow & Process Automation</li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Custom UI / UX Development</li>
+                                 <li class="bg-white font-style-level4 px-2 py-1 rounded">Hybrid-Code & Scaling</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Benefit Part -->
+                     <div class="flex flex-row items-end justify-between">
+                        <div>
+                           <p class="font-style-level3 mb-2">Benefits:</p>
+                           <ul class="grid grid-cols-2 gap-y-2 gap-x-1 font-style-level5">
+                              <li>• 2–4-week delivery</li>
+                              <li>• Transparent progress...</li>
+                              <li>• Up to 70% cost reduction</li>
+                              <li>• Cross-platform...</li>
+                           </ul>
+                        </div>
+                        <a href="/"
+                           class="ml-6 inline-flex items-center px-8 py-3 rounded-xl text-[#710B13] font-bold bg-white hover:bg-[#ffffff] hover:text-[#cf2e2e] transition-colors duration-200">
+                           <span>VIEW MORE</span>
+                           <svg class="ml-2 w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
 
