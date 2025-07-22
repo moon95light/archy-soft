@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'MyFont';
-  src: url('./assets/fonts/Roboto_Condensed-Black.ttf') format('truetype');
-  font-style: normal;
-  font-display: block;
+   font-family: 'MyFont';
+   src: url('./assets/fonts/Roboto_Condensed-Black.ttf') format('truetype');
+   font-style: normal;
+   font-display: block;
 }
 
 .font-mgm {
@@ -15,12 +15,15 @@
 .font-size-level1 {
    font-size: 12px;
 }
+
 .font-size-level2 {
    font-size: 13.5px;
 }
+
 .font-size-level3 {
    font-size: 30px;
 }
+
 .font-size-level4 {
    font-size: 36px;
 }
@@ -28,46 +31,103 @@
 @font-face {
    font-family: 'MyFont1';
    src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
- }
+}
 
 .font-style-level1 {
    font-family: "MyFont1", Sans-serif;
    font-size: 32px;
    font-weight: bold;
 }
+
 .font-style-level2 {
    font-family: "MyFont1", sans-serif;
    font-size: 18px;
    color: #535862;
 }
+
 .font-style-level3 {
    font-family: 'MyFont1', sans-serif;
    font-size: 16px;
    color: white;
    font-weight: 300;
 }
+
 .font-style-level4 {
    font-family: 'MyFont1', sans-serif;
    font-size: 12px;
    color: black;
 }
+
 .font-style-level5 {
    font-family: 'MyFont1', sans-serif;
    font-size: 12px;
    color: white;
 }
+
 .font-style-level6 {
    font-family: 'MyFont1', sans-serif;
    font-size: 22px;
    font-weight: bold;
 }
+
 .font-style-level7 {
    font-family: 'MyFont1', sans-serif;
    font-size: 20px;
 }
+
 .font-style-level8 {
    font-family: 'MyFont1', sans-serif;
    font-size: 18px;
    font-weight: bold;
    color: white;
+}
+
+.font-style-level9 {
+   font-family: 'MyFont1', sans-serif;
+   font-size: 26px;
+   font-weight: bold;
+}
+
+.font-style-level10 {
+   font-family: 'MyFont1', sans-serif;
+   font-size: 36px;
+   font-weight: 600;
+   line-height: 44px;
+   color: #181D27;
+   letter-spacing: -0.02em;
+}
+
+.font-style-level11 {
+   font-family: 'MyFont1', sans-serif;
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 28px;
+   color: #535862;
+}
+
+.font-style-level12 {
+   font-family: 'MyFont1', sans-serif;
+   font-size: 18px;
+   font-weight: 500;
+   color: #818386;
+   white-space: nowrap;
+}
+
+.font-style-level13 {
+   font-family: 'MyFont1', sans-serif;
+   font-size: 20px;
+   font-weight: 400;
+   color: #000000;
+}
+
+.font-style-level114 {
+   font-family: 'MyFont1', sans-serif;
+   font-size: 16px;
+   font-weight: 600;
+}
+
+.font-style-level15 {
+   font-family: 'MyFont1', sans-serif;
+   font-size: 16px;
+   font-weight: 300;
 }
