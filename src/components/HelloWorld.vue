@@ -1,5 +1,12 @@
 <script setup>
 import { ref, computed } from 'vue'
+
+import CaseStudy from './dashboard/CaseStudy.vue'
+import WhyChoose from './dashboard/WhyChoose.vue'
+import TechnologyStack from './dashboard/TechnologyStack.vue'
+import OurRewards from './dashboard/OurRewards.vue'
+import Reviews from './dashboard/Reviews.vue'
+
 import mobileAppImg from '../assets/images/Mobile-App-Development.webp'
 import nolowCodeImg from '../assets/images/no-code-development.webp'
 import mvpDevelopmentImg from '../assets/images/MVP-Development.webp'
@@ -749,6 +756,12 @@ const selectedIndustry = computed(() => industries.find(i => i.key === selectedK
          </div>
       </div>
    </section>
+
+   <CaseStudy />
+   <WhyChoose />
+   <TechnologyStack />
+   <OurRewards />
+   <Reviews />
 </template>
 <style scoped>
 .fade-enter-active,
