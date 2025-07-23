@@ -1,15 +1,23 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import svg1 from '../../assets/images/svg/1.svg'
+import svg2 from '../../assets/images/svg/2.svg'
+import svg3 from '../../assets/images/svg/3.svg'
+import svg4 from '../../assets/images/svg/4.svg'
+import svg5 from '../../assets/images/svg/5.svg'
+import svg6 from '../../assets/images/svg/6.svg'
+import svg7 from '../../assets/images/svg/7.svg'
+import svg8 from '../../assets/images/svg/8.svg'
 
 const slides = [
-  { img: 'https://www.archysoft.com/wp-content/uploads/2025/06/image-62.svg', title: 'Reward 1' },
-  { img: 'https://www.archysoft.com/wp-content/uploads/2025/06/image-61.svg', title: 'Reward 2' },
-  { img: 'https://www.archysoft.com/wp-content/uploads/2025/06/slide111.svg', title: 'Reward 3' },
-  { img: 'https://www.archysoft.com/wp-content/uploads/2025/06/image-60.svg', title: 'Reward 4' },
-  { img: 'https://www.archysoft.com/wp-content/uploads/2025/06/slide10.svg', title: 'Reward 5' },
-  { img: 'https://www.archysoft.com/wp-content/uploads/2025/06/slide8.svg', title: 'Reward 6' },
-  { img: 'https://www.archysoft.com/wp-content/uploads/2025/06/image-60-1.svg', title: 'Reward 7' },
-  { img: 'https://www.archysoft.com/wp-content/uploads/2025/06/image-63.svg', title: 'Reward 8' },
+  { img: svg1, title: 'Reward 1' },
+  { img: svg2, title: 'Reward 2' },
+  { img: svg3, title: 'Reward 3' },
+  { img: svg4, title: 'Reward 4' },
+  { img: svg5, title: 'Reward 5' },
+  { img: svg6, title: 'Reward 6' },
+  { img: svg7, title: 'Reward 7' },
+  { img: svg8, title: 'Reward 8' },
 ]
 
 const current = ref(0)
