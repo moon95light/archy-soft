@@ -68,8 +68,7 @@ const hoverStates = ref(Array(slides.length).fill(false))
    <section class="relative max-w-[1230px] py-8 mx-auto px-4 py-12">
       <div class="p-2 mb-4">
          <h2 class="font-style-level10 mb-4">Case study</h2>
-         <p class="font-style-level11">A few examples of how businesses launched faster and saved on dev costs using
-            low-code and no-code.</p>
+         <p class="font-style-level11">A few examples of how businesses launched faster and saved on dev costs using low-code and no-code.</p>
       </div>
       <!-- Slider container -->
       <div class="relative overflow-hidden">
