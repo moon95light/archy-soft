@@ -32,6 +32,9 @@
    font-family: 'MyFont1';
    src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
 }
+.font-style-default {
+   font-family: 'MyFont1', sans-serif;
+}
 
 .font-style-level1 {
    font-family: "MyFont1", Sans-serif;

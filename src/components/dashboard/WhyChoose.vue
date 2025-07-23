@@ -47,8 +47,8 @@ const achievements = [
             class="w-16 h-16 mb-4 bg-center bg-no-repeat bg-cover rounded-full"
             :style="{ backgroundImage: `url('${item.icon}')` }"
           ></div>
-          <h3 class="text-lg font-semibold text-center mb-2">{{ item.title }}</h3>
-          <p class="text-gray-600 text-center">{{ item.desc }}</p>
+          <h3 class="text-lg font-style-default text-center mb-2">{{ item.title }}</h3>
+          <p class="font-style-default text-gray-600 text-center">{{ item.desc }}</p>
         </div>
       </div>
    </section>
