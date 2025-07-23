@@ -94,21 +94,21 @@ const selectedIndustry = computed(() => industries.find(i => i.key === selectedK
       <div class="relative z-10 max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
          <!-- Text Section -->
          <div class="max-w-2.5xl">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight font-style-default">
                Build Apps 3–5× Faster with <br />
                Low-Code/No-Code Development
             </h1>
-            <p class="text-gray-600 mt-4 text-lg">
+            <p class="text-gray-600 mt-4 text-lg font-style-default">
                Cut your dev costs by up to 50% and launch faster with scalable, cross-platform apps
                built on Bubble, FlutterFlow, or your preferred tools.
             </p>
             <div class="mt-6 flex flex-wrap gap-4">
                <button
-                  class="bg-[#9c111d] cursor-pointer hover:bg-red-700 text-white font-semibold py-3 px-6 rounded shadow">
+                  class="bg-[#9c111d] font-style-default cursor-pointer hover:bg-red-700 text-white font-semibold py-3 px-6 rounded shadow">
                   Let's talk about your idea
                </button>
                <button
-                  class="bg-white cursor-pointer border border-red-600 text-red-600 font-semibold py-3 px-6 rounded shadow hover:bg-red-50">
+                  class="font-style-default bg-white cursor-pointer border border-red-600 text-red-600 font-semibold py-3 px-6 rounded shadow hover:bg-red-50">
                   View a live demo
                </button>
             </div>
