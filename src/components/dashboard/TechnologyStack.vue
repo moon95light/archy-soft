@@ -160,18 +160,21 @@ function setSubtab(sub) {
             your project’s goals, complexity, and budget.
          </p>
       </div>
-      <div class="flex flex-row min-h-[262px] max-h-[298px] bg-white rounded-xl shadow">
+      <div class="flex flex-row min-h-[262px] max-h-[298px] bg-white rounded-xl">
          <!-- Tabs & Subtabs (1/4 width) -->
-         <div class="w-1/4 border-r border-gray-200 p-4 flex flex-col gap-2">
+         <div class="w-2/7 border-r border-gray-200 p-4 flex flex-col gap-2 overflow-y-auto max-h-[298px]">
             <div class="flex flex-col gap-2">
                <button v-for="tab in tabs" :key="tab.key"
                   @click="tab.key === 'ttraditional-tech-stack' ? null : setTab(tab.key)" :class="[
-                     'px-4 py-2 rounded font-semibold transition text-left flex items-center justify-between',
+                     'group px-4 py-3 mb-4 rounded font-semibold transition text-left flex items-center justify-between',
                      activeTab === tab.key
-                        ? 'bg-[#9C111D] text-white'
-                        : 'bg-white text-[#9C111D] border border-[#9C111D] hover:bg-[#f8e9ec]'
+                        ? 'bg-[#ffe4e4] font-style-level23'
+                        : 'bg-white font-style-level22 hover:bg-[#f8e9ec]'
                   ]">
-                  <span>{{ tab.label }}</span>
+                  <span class="transition-all duration-200 ease-in-out"
+                     :class="activeTab === tab.key ? 'translate-x-[10px]' : 'group-hover:translate-x-[10px]'">
+                     {{ tab.label }}
+                  </span>
                   <span v-if="tab.key === 'ttraditional-tech-stack'" class="ml-2 align-middle cursor-pointer"
                      @click.stop="toggleSubtabs">
                      <svg width="20" height="20" viewBox="0 0 25 24" fill="none"
@@ -183,21 +186,27 @@ function setSubtab(sub) {
                </button>
             </div>
             <!-- Subtabs for Traditional Tech Stack -->
-            <div v-if="activeTab === 'ttraditional-tech-stack' && showSubtabs"
-               class="flex flex-col gap-2 mt-4 overflow-y-auto max-h-[180px] pr-2">
-               <button v-for="sub in tabs.find(t => t.key === 'ttraditional-tech-stack').technologies.map(t => t.sub)"
-                  :key="sub" @click="setSubtab(sub)" :class="[
-                     'px-3 py-1 rounded text-sm font-medium transition text-left',
+            <div v-if="activeTab === 'ttraditional-tech-stack' && showSubtabs" class="flex flex-col gap-2 pr-2">
+               <button
+                  v-for="sub in tabs.find(t => t.key === 'ttraditional-tech-stack').technologies.map(t => t.sub)"
+                  :key="sub"
+                  @click="setSubtab(sub)"
+                  :class="[
+                     'group px-4 py-3 mb-4 rounded font-semibold transition text-left flex items-center justify-between',
                      activeSubtab === sub
-                        ? 'bg-[#534E51] text-white'
-                        : 'bg-gray-100 text-[#534E51] hover:bg-gray-200'
+                        ? 'bg-[#ffe4e4] font-style-level23'
+                        : 'bg-white font-style-level22 hover:bg-[#f8e9ec]'
                   ]">
-                  {{ sub }}
+                  <span
+                     class="transition-all duration-200 ease-in-out"
+                     :class="activeSubtab === sub ? 'translate-x-[10px]' : 'group-hover:translate-x-[10px]'">
+                     {{ sub }}
+                  </span>
                </button>
             </div>
          </div>
          <!-- Content (3/4 width) -->
-         <div class="w-3/4 p-6 overflow-y-auto">
+         <div class="w-5/7 p-6 overflow-y-auto">
             <!-- Non-traditional tabs -->
             <div v-if="activeTab !== 'ttraditional-tech-stack'"
                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

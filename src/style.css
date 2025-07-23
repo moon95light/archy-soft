@@ -143,3 +143,16 @@
    font-size: 12px;
    color: #000000;
 }
+
+.font-style-level22 {
+   font-family: 'MyFont1', sans-serif;
+   font-size: 16px;
+   color: #534e51;
+   font-weight: 100;
+}
+
+.font-style-level23 {
+   font-family: 'MyFont1', sans-serif;
+   font-size: 16px;
+   color: #bf1522;
+}
