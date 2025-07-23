@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
-import logo from '../../public/logo-white.svg'
+import logo from '/logo-white.svg'
 
 const showScrollTop = ref(false)
 
