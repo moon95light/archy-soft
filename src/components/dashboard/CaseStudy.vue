@@ -119,7 +119,7 @@ const hoverStates = ref(Array(slides.length).fill(false))
                       <!-- Show description only on hover -->
                       <p
                         v-if="hoverStates[idx]"
-                        class="font-style-levelflex flex-row justify-center items-center max-w-max min-w-max px-2 py-[1px] bg-white border border-white rounded font-light text-[12px] text-black mt-10"
+                        class="font-style-level21 flex flex-row justify-center items-center max-w-max min-w-max px-2 py-[1px] bg-white border border-white rounded mt-10"
                       >
                         Built with Bubble.io
                       </p>
