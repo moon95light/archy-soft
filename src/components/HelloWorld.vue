@@ -168,21 +168,21 @@ const selectedIndustry = computed(() => industries.find(i => i.key === selectedK
          </svg>
          <div>
             <p class="text-2xl font-bold text-gray-900 font-size-level4">30+</p>
-            <p class="text-gray-600 font-size-level3">MVPs launched</p>
+            <p class="text-gray-600 font-style-default font-size-level3">MVPs launched</p>
          </div>
          <svg width="22" height="93" viewBox="0 0 22 93" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.66669 92.5L20.6667 0.5" stroke="#9C111D" stroke-width="2"></path>
          </svg>
          <div>
             <p class="text-2xl font-bold text-gray-900 font-size-level4">50+</p>
-            <p class="text-gray-600 font-size-level3">Tools mastered</p>
+            <p class="text-gray-600 font-size-level3 font-style-default">Tools mastered</p>
          </div>
          <svg width="22" height="93" viewBox="0 0 22 93" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.66669 92.5L20.6667 0.5" stroke="#9C111D" stroke-width="2"></path>
          </svg>
          <div>
             <p class="text-2xl font-bold text-gray-900 font-size-level4">95%</p>
-            <p class="text-gray-600 font-size-level3">Clients satisfaction</p>
+            <p class="text-gray-600 font-size-level3 font-style-default">Clients satisfaction</p>
          </div>
          <svg width="70" height="117" viewBox="0 0 70 117" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
