@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  color-scheme: light;
-}
-
 @font-face {
    font-family: 'MyFont';
    src: url('./assets/fonts/Roboto_Condensed-Black.ttf') format('truetype');
@@ -106,128 +102,87 @@
 
 .font-style-level11 {
    font-family: 'MyFont1', sans-serif;
-   font-size: 20px;
+   font-size: 18px;
    font-weight: 400;
-   line-height: 30px;
+   line-height: 28px;
    color: #535862;
 }
 
 .font-style-level12 {
    font-family: 'MyFont1', sans-serif;
-   font-size: 48px;
-   font-weight: 600;
-   line-height: 60px;
-   color: #181D27;
-   letter-spacing: -0.02em;
+   font-size: 18px;
+   font-weight: 500;
+   color: #818386;
+   white-space: nowrap;
 }
 
 .font-style-level13 {
    font-family: 'MyFont1', sans-serif;
-   font-size: 16px;
-   font-weight: 600;
-   color: #9C111D;
+   font-size: 20px;
+   font-weight: 400;
+   color: #000000;
 }
 
 .font-style-level14 {
    font-family: 'MyFont1', sans-serif;
-   font-size: 24px;
+   font-size: 16px;
    font-weight: 600;
-   line-height: 32px;
-   color: #181D27;
 }
 
 .font-style-level15 {
    font-family: 'MyFont1', sans-serif;
    font-size: 16px;
-   font-weight: 400;
-   line-height: 24px;
-   color: #535862;
-}
-
-.font-style-level16 {
-   font-family: 'MyFont1', sans-serif;
-   font-size: 14px;
-   font-weight: 600;
-   color: #9C111D;
-}
-
-.font-style-level17 {
-   font-family: 'MyFont1', sans-serif;
-   font-size: 12px;
-   font-weight: 500;
-   color: #344054;
-}
-
-.font-style-level18 {
-   font-family: 'MyFont1', sans-serif;
-   font-size: 30px;
-   font-weight: 600;
-   color: #181D27;
-}
-
-.font-style-level19 {
-   font-family: 'MyFont1', sans-serif;
-   font-size: 16px;
-   font-weight: 400;
-   color: #535862;
+   font-weight: 300;
 }
 
 .font-style-level20 {
    font-family: 'MyFont1', sans-serif;
-   font-size: 60px;
-   font-weight: 600;
-   line-height: 72px;
-   color: #9C111D;
-   letter-spacing: -0.02em;
+   font-size: 20px;
+   font-weight: bold;
 }
 
 .font-style-level21 {
    font-family: 'MyFont1', sans-serif;
-   font-size: 18px;
-   font-weight: 500;
-   line-height: 28px;
-   color: #181D27;
+   font-size: 12px;
+   color: #000000;
 }
 
 .font-style-level22 {
    font-family: 'MyFont1', sans-serif;
    font-size: 16px;
-   font-weight: 400;
-   color: #535862;
+   color: #534e51;
+   font-weight: 100;
 }
 
 .font-style-level23 {
    font-family: 'MyFont1', sans-serif;
    font-size: 16px;
-   font-weight: 600;
-   color: #535862;
+   color: #bf1522;
 }
 
 .font-style-level24 {
    font-family: 'MyFont1', sans-serif;
-   font-size: 14px;
-   font-weight: 500;
-   color: #344054;
+   font-size: 20px;
+   font-weight: 400;
+   color: #000000;
 }
-
 .font-style-level25 {
    font-family: 'MyFont1', sans-serif;
-   font-size: 16px;
-   font-weight: 400;
-   line-height: 24px;
-   color: #535862;
+   font-size: 24px;
+   font-weight: 500;
+   color: #000000;
 }
 
 .font-style-level26 {
    font-family: 'MyFont1', sans-serif;
    font-size: 14px;
    font-weight: 600;
-   color: #9C111D;
+   color: #d9d9d9;
 }
 
 .font-style-level27 {
    font-family: 'MyFont1', sans-serif;
-   font-size: 16px;
-   font-weight: 600;
-   color: #181D27;
+   font-size: 14px;
+   font-weight: 400;
+   color: #969696;
 }
